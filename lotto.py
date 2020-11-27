@@ -7,10 +7,12 @@ RANGE=49 #we will extract numbers from 1 to 49
 
 def lotto():
 	extracted=[]
-	for i in range(1,NUMBERS_TO_EXTRACT+1):
+	numbersExtracted=0
+	while numbersExtracted<NUMBERS_TO_EXTRACT:
 		new_number=random.randint(1,49)
 		if new_number not in extracted:
 			extracted.append(new_number)
+			numbersExtracted+=1
 	return extracted
 
 print(lotto())
